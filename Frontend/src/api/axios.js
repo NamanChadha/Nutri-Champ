@@ -1,14 +1,14 @@
-import axios from "axios"
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-  timeout: 20000,
-})
+  baseURL: import.meta.env.VITE_API_URL,   // ✅ NO QUOTES
+  timeout: 30000,
+});
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("nutri_token")
-  if (token) config.headers.Authorization = `Bearer ${token}`
-  return config
-})
+  const token = localStorage.getItem("nutri_token");
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
 
-export default api
+export default api;
