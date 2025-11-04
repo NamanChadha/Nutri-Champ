@@ -29,17 +29,19 @@ genai.configure(api_key=api_key)
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://nutri-champ-ndda8ozt0-namanchadhas-projects.vercel.app",
+        "https://nutri-champ-ndda8ozt0-namanchadhas-projects.vercel.app",
+        "http://localhost:5173",
     ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],  # ✅ VERY IMPORTANT
     allow_headers=["*"],
 )
+
 
 
 SECRET_KEY = os.getenv("SECRET_KEY")
