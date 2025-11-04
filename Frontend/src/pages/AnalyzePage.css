@@ -1,0 +1,156 @@
+/* src/pages/AnalyzePage.css */
+
+.analyze-container {
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.analyze-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1b4332;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input Card */
+.analyze-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.analyze-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.analyze-inputs input[type="text"],
+.analyze-inputs input[type="file"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #95d5b2;
+  flex: 1 1 200px;
+  font-size: 14px;
+  background: #f8fff9;
+}
+
+.analyze-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #52b788, #40916c);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+/* Error Box */
+.analyze-error {
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #d90429;
+  font-size: 14px;
+}
+
+/* Nutrition Results */
+.nutrition-section {
+  margin-top: 24px;
+}
+
+.nutrition-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2d6a4f;
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card .label {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.stat-card .value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b4332;
+}
+
+/* Micronutrients */
+.micros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.micro-card {
+  background: #f9fff4;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.micro-card:hover {
+  background: #e8f9f1;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card .label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.stat-card .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b4332;
+}
+
+.chart-box {
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,64 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px); /* header + footer height accounted */
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-card {
+  max-width: 650px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1b4332;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtext {
+  color: #2d6a4f;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* ✅ Cards instead of pill buttons */
+.dashboard-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dash-btn {
+  flex: 1;
+  min-width: 150px;
+  max-width: 180px;
+  background: #40916c;
+  color: white;
+  text-decoration: none;
+  padding: 28px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dash-btn:hover {
+  background: #2d6a4f;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}

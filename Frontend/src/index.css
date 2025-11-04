@@ -1,0 +1,214 @@
+/* src/index.css - Nutri Champ theme (plain CSS) */
+
+/* Theme tokens */
+:root{
+  --beige:#F5F5DC;
+  --muted-beige:#F1F1E6;
+  --darkgreen:#23503f;
+  --green-accent:#31c77b;
+  --olive:#A3B18A;
+  --card-bg:#ffffff;
+  --muted-text:#6b7280;
+  --radius:12px;
+  --max-width:1100px;
+}
+
+/* Reset-ish */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--muted-beige), #ffffff 60%);
+  color:#17202a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:18px;
+}
+
+/* header */
+header {
+  background: var(--beige);
+  padding:14px 0;
+  box-shadow: 0 1px 6px rgba(10,10,10,0.04);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--darkgreen);
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+
+/* nav */
+nav .nav-btn {
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(35,80,63,0.08);
+  background:transparent;
+  color:var(--darkgreen);
+  text-decoration:none;
+  font-weight:600;
+  transition: all .14s ease;
+}
+nav .nav-btn:hover{ background: rgba(35,80,63,0.04); transform:translateY(-2px); }
+
+/* hero */
+.hero {
+  border-radius:0 0 28px 28px;
+  padding:48px 18px;
+  background: linear-gradient(135deg, rgba(46,78,63,0.04), rgba(163,177,138,0.03));
+  margin-bottom:10px;
+}
+.hero .hero-title{ font-size:2.2rem; margin:8px 0; color:var(--darkgreen); }
+.hero .hero-sub{ color: #334155; max-width:640px; margin:0 auto 12px; }
+
+/* card */
+.card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: 0 8px 30px rgba(16,24,32,0.06);
+  border: 1px solid rgba(14,14,14,0.02);
+}
+
+/* forms */
+.form-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+input[type="text"], input[type="number"], select, textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(16,24,32,0.08);
+  background: #fafafa;
+  outline:none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+  font-size:14px;
+  color:#111827;
+}
+textarea{ min-height:100px; resize:vertical; }
+
+input:focus, textarea:focus, select:focus{
+  box-shadow: 0 8px 20px rgba(35,80,63,0.06);
+  border-color:var(--darkgreen);
+}
+
+/* grid for inputs in meal plan */
+.col-4 { flex:1 1 200px; min-width:140px; }
+.col-full { flex:1 1 100%; }
+
+/* buttons */
+.btn {
+  display:inline-block;
+  background: linear-gradient(90deg, var(--darkgreen), var(--green-accent));
+  color:white;
+  padding:10px 18px;
+  border-radius:999px;
+  font-weight:700;
+  border:none;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow: 0 8px 20px rgba(16,24,32,0.08);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
+}
+.btn:active{ transform:translateY(1px) }
+.btn.secondary {
+  background:transparent;
+  color:var(--darkgreen);
+  border:1px solid rgba(35,80,63,0.12);
+  box-shadow:none;
+}
+
+/* subtle helper */
+.helper { font-size:13px; color:var(--muted-text); }
+
+/* label */
+.label { display:block; font-weight:600; color:#2b3b36; margin-bottom:8px; }
+
+/* results */
+.prewrap { white-space:pre-wrap; background:#fbfbfb; padding:12px; border-radius:10px; border:1px dashed rgba(0,0,0,0.03); }
+
+/* small stat cards */
+.stats-grid { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+.stat { flex:1 1 120px; padding:12px; border-radius:10px; background:linear-gradient(180deg,#fff,#fafafa); text-align:center; }
+
+/* charts container */
+.chart-box { min-height:260px; }
+
+/* footer */
+footer { text-align:center; padding:18px 0; margin-top:30px; color:var(--muted-text); }
+
+/* responsive */
+@media (max-width:880px){
+  .form-row{ flex-direction:column; }
+  .hero{ padding:28px 12px; }
+}
+
+/* small animations */
+@keyframes scaleIn { from { transform:scale(.94); opacity:0 } to { transform:none; opacity:1 } }
+
+/* ---------------------- */
+/* UI Enhancements        */
+/* ---------------------- */
+.page-title { font-size: 1.4rem; color: #1f5b43; margin: 18px 0; font-weight:700; }
+.plan-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; margin-top: 12px; }
+.day-card { background: #fff; border-radius: 12px; padding: 14px; box-shadow: 0 8px 24px rgba(16,24,32,0.08); border: 1px solid rgba(0,0,0,0.03); }
+.day-title { font-size: 1rem; color: #234833; margin: 0 0 8px 0; font-weight:700; }
+.meal-list { margin: 0; padding-left: 18px; color: #333; font-size: 0.95rem; }
+.meal-line { margin-bottom: 6px; line-height: 1.3; white-space: pre-wrap; }
+
+.section-heading { margin-top: 28px; color: #234833; font-weight:700; }
+
+.stat-label { font-size: 13px; color:#6b7280; margin-bottom:6px; }
+.stat-value { font-size: 20px; color:#113927; font-weight:700; }
+
+.chart-card { background: #fff; border-radius:12px; padding:12px; margin-top:18px; box-shadow: 0 6px 20px rgba(16,24,32,0.04); border:1px solid rgba(0,0,0,0.03); min-height: 340px; }
+
+/* ---------------------- */
+/* Cursor & Selection Fix */
+/* ---------------------- */
+
+/* Default: arrow cursor + no selection */
+body, html {
+  cursor: default;
+  user-select: none;
+}
+
+/* Allow text selection + text cursor only in inputs/textarea */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+  cursor: text;
+  user-select: text;
+}
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* only block sideways scroll */
+  overflow-y: auto;   /* allow vertical scroll */
+}

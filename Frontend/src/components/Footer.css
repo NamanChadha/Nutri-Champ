@@ -1,0 +1,52 @@
+/* src/components/Footer.css */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  flex: 1; /* pushes footer to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background: #f5f5dc; /* light beige */
+  color: #2d3748;
+  padding: 16px 20px;
+  margin-top: auto; /* ensures footer stays at bottom */
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #1b4332;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #40916c;
+  text-decoration: underline;
+}
